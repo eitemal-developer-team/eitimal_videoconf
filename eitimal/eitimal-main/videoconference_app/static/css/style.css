@@ -1,12 +1,14 @@
 /* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-body{
+
+/* body{
   min-height: 100vh;
   width: 100%;
   background: #009579;
@@ -21,7 +23,14 @@ body{
   background: #fff;
   border-radius: 7px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+} */
+.custom-btn {
+  letter-spacing: 1px;
+  font-size: medium;
+  /* color: #5214cd; */
+  width: auto !important;
 }
+
 /* .container .registration{
   display: none;
 }
@@ -34,7 +43,7 @@ body{
 #check{
   display: none;
 } */
-.container .form{
+/* .container .form{
   padding: 2rem;
 }
 .form header{
@@ -124,7 +133,7 @@ body{
 }
 
 /* make the buttons inside the div with class name intro look attractive */
-.intro a {
+/* .intro a {
   background-color: #4CAF50;
   border: none;
   color: white;
@@ -135,65 +144,48 @@ body{
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-}
+} */
 
 /* center the buttons inside the div with class name intro */
-.intro a {
+/* .intro a {
   margin-top: 7px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-}
+} */
 
 /* make the buttons inside the div with class name intro look attractive when hovered */
-.intro a:hover {
+/* .intro a:hover {
   background-color: #45a049;
-}
+} */
 
-/* center the div named dashboard */
-.dashboard {
-  margin: auto;
-  width: 100%;
-  padding: 10px;
-  color: white;
-}
 
 /** align the text inside the div named dashboard to the center */
 .dashboard h1 {
-  font-size: 50px;
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
+  color: #5214cd;
+
 }
 
-.dashboard a {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+.logo {
+  height: 350px;
+
 }
 
-.dashboard a {
-  margin-top: 7px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.dashboard a:hover {
-  background-color: #45a049;
-}
 
 .dashboard {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
 }
