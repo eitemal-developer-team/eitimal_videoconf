@@ -8,26 +8,52 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!--<title>Login & Registration Form | CoderGirl</title>-->
   <!---Custom CSS File--->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"></script>
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- <link rel="stylesheet" href="{% static 'css/reg.css' %}"> -->
+
 </head>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+
 <body>
-  <div class="container">
-    <div class="login form">
-      <header>Join Room</header>
-      <form action="{% url 'join_room' %}" method="POST">
-        {% csrf_token %}
-        <input type="text" placeholder="Enter room ID" name="roomID">
-        <input type="submit" class="button" value="Join">
-        <center>
-          {% if success %}
-          <p style="color: green;"><b>{{ success }}</b></p>
-          {% endif %}
-          {% if error %}
-          <p style="color: red;">{{ error }}</p>
-          {% endif %}
-        </center>
-      </form>
+    <div class="col-lg-6 mb-5 mb-lg-0 position-relative my-5">
+
+      <div class="card bg-glass">
+  
+        <div class="card-body px-4 py-4 px-md-6 ">
+          <!-- <img src="{% static 'eitemal.png' %}" class="logo my-2" alt='logo'></img> -->
+
+          <div class="login form">
+            <header>Join Room</header>
+            <form action="{% url 'join_room' %}" method="POST">
+              {% csrf_token %}
+              <input type="text" class="form-control" placeholder="Enter room ID" name="roomID">
+              <input type="submit"  class="btn btn-outline-primary mt-2 custom-btn" value="Join">
+              <center>
+                {% if success %}
+                <p style="color: green;"><b>{{ success }}</b></p>
+                {% endif %}
+                {% if error %}
+                <p style="color: red;">{{ error }}</p>
+                {% endif %}
+              </center>
+            </form>
+          </div>
+        </div>
+  
+  
     </div>
+   
   </div>
 </body>
 </html>
